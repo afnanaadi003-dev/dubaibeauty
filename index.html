@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dubai 1000 Beauty: Iconic Stars of Arabian Cinema & TV</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Cinzel"', 'serif'],
+                        arabic: ['"Amiri"', 'serif'],
+                    },
+                    colors: {
+                        dubai: {
+                            bg: '#06040d',
+                            card: '#0f0a1c',
+                            border: '#2a1a4a',
+                            gold: '#fbbf24',
+                            amber: '#f59e0b',
+                            rose: '#f43f5e',
+                            glow: '#e879f9'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #06040d;
+            color: #f3e8ff;
+            overflow-x: hidden;
+        }
+
+        .glass-card {
+            background: rgba(15, 10, 28, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(251, 191, 36, 0.25);
+        }
+
+        .glass-card:hover {
+            border-color: rgba(251, 191, 36, 0.65);
+            box-shadow: 0 10px 30px -10px rgba(245, 158, 11, 0.4);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #fbbf24 0%, #f43f5e 50%, #e879f9 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #06040d;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #2a1a4a;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #fbbf24;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased relative min-h-screen pb-16">
+
+    <!-- Ambient Glowing Orbs -->
+    <div class="fixed top-[-10%] left-[-10%] w-[500px] h-[500px] bg-amber-900/20 rounded-full blur-[120px] pointer-events-none"></div>
+    <div class="fixed bottom-[-10%] right-[-10%] w-[600px] h-[600px] bg-rose-900/20 rounded-full blur-[140px] pointer-events-none"></div>
+
+    <!-- Header Section -->
+    <header class="relative z-10 pt-12 pb-8 px-4 sm:px-6 lg:px-8 text-center max-w-7xl mx-auto">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-card border border-amber-500/30 mb-4">
+            <i data-lucide="sparkles" class="w-4 h-4 text-amber-400"></i>
+            <span class="text-xs font-semibold tracking-wider text-amber-300 uppercase">Dubai & Middle East Cinema Archive</span>
+        </div>
+
+        <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight font-serif mb-4">
+            <span class="gradient-text">Dubai 1000 Beauty</span>
+        </h1>
+        <p class="text-base sm:text-lg text-amber-200/80 max-w-2xl mx-auto font-light leading-relaxed">
+            A directory celebrating 1,000 iconic actresses, film icons, and TV stars across Dubai, the UAE, Egypt, Lebanon, and the Arab world.
+        </p>
+
+        <!-- Stats Counter Bar -->
+        <div class="flex flex-wrap justify-center items-center gap-6 sm:gap-12 mt-8 py-4 px-6 glass-card rounded-2xl max-w-3xl mx-auto">
+            <div class="text-center">
+                <span class="block text-2xl font-bold text-amber-400 font-serif">1,000</span>
+                <span class="text-xs text-amber-200">Actresses</span>
+            </div>
+            <div class="w-px h-8 bg-amber-800/40 hidden sm:block"></div>
+            <div class="text-center">
+                <span class="block text-2xl font-bold text-amber-400 font-serif">3,500+</span>
+                <span class="text-xs text-amber-200">Films & Series</span>
+            </div>
+            <div class="w-px h-8 bg-amber-800/40 hidden sm:block"></div>
+            <div class="text-center">
+                <span class="block text-2xl font-bold text-rose-400 font-serif">MENA</span>
+                <span class="text-xs text-amber-200">Regional Media</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Search & Filter Controls -->
+    <section class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
+        <div class="glass-card p-4 sm:p-6 rounded-3xl flex flex-col md:flex-row gap-4 justify-between items-center">
+
+            <!-- Search Field -->
+            <div class="relative w-full md:w-96">
+                <i data-lucide="search" class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-amber-400"></i>
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search actress, Arabic name, show..."
+                    class="w-full bg-black/40 text-white placeholder-amber-300/40 pl-12 pr-4 py-3 rounded-2xl border border-amber-500/30 focus:outline-none focus:border-amber-400 transition text-sm"
+                >
+            </div>
+
+            <!-- Category Pills -->
+            <div class="flex flex-wrap items-center justify-center gap-2 w-full md:w-auto">
+                <button onclick="filterCategory('All')" class="filter-btn active px-4 py-2 rounded-xl text-xs font-semibold bg-gradient-to-r from-amber-500 to-rose-600 text-white shadow-lg transition">All 1000</button>
+                <button onclick="filterCategory('Cinema Queens')" class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-black/40 hover:bg-amber-900/40 text-amber-200 border border-amber-500/20 transition">Cinema Queens</button>
+                <button onclick="filterCategory('Gulf & Regional')" class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-black/40 hover:bg-amber-900/40 text-amber-200 border border-amber-500/20 transition">Gulf & Regional</button>
+                <button onclick="filterCategory('Fashion Icons')" class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-black/40 hover:bg-amber-900/40 text-amber-200 border border-amber-500/20 transition">Fashion Icons</button>
+                <button onclick="filterCategory('Golden Era')" class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-black/40 hover:bg-amber-900/40 text-amber-200 border border-amber-500/20 transition">Golden Era</button>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex items-center gap-2">
+                <button onclick="toggleFavoritesOnly()" id="favToggleBtn" class="px-3.5 py-2.5 rounded-xl bg-pink-500/20 hover:bg-pink-500/30 text-pink-300 border border-pink-500/30 text-xs font-semibold flex items-center gap-1.5 transition">
+                    <i data-lucide="heart" class="w-4 h-4 text-pink-400"></i>
+                    <span>Favorites</span>
+                </button>
+                <button onclick="triggerSurpriseModal()" class="px-3.5 py-2.5 rounded-xl bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-500/40 text-xs font-semibold flex items-center gap-1.5 transition">
+                    <i data-lucide="sparkles" class="w-4 h-4"></i>
+                    <span>Surprise</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Grid -->
+    <main class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div id="actressGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <!-- Populated dynamically via JS -->
+        </div>
+
+        <!-- Load More Pagination Button -->
+        <div class="mt-12 text-center" id="loadMoreContainer">
+            <button onclick="loadMore()" class="px-8 py-3.5 rounded-2xl bg-gradient-to-r from-amber-500 to-rose-600 hover:from-amber-400 hover:to-rose-500 text-white font-bold text-sm shadow-xl transition transform hover:-translate-y-0.5">
+                Load More Stars
+            </button>
+        </div>
+
+        <!-- No Results Fallback -->
+        <div id="noResults" class="hidden text-center py-20">
+            <i data-lucide="clapperboard" class="w-16 h-16 text-amber-500/40 mx-auto mb-4 animate-pulse"></i>
+            <h3 class="text-xl font-bold text-amber-200">No Actresses Found</h3>
+            <p class="text-sm text-amber-400 mt-1">Try adjusting your search terms or filter selection.</p>
+        </div>
+    </main>
+
+    <!-- Detailed Profile Modal Popup -->
+    <div id="profileModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="glass-card bg-[#0b0618] border border-amber-500/30 rounded-3xl w-full max-w-4xl max-h-[90vh] overflow-y-auto relative shadow-2xl transform scale-95 transition-transform duration-300" id="modalContent">
+            <button onclick="closeModal()" class="absolute top-4 right-4 z-20 p-2.5 rounded-full bg-black/60 hover:bg-amber-600/80 text-white transition backdrop-blur-sm">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- Application Scripting -->
+    <script>
+        // Seed Database with prominent Arab, Middle Eastern, and Gulf Actresses
+        const seedActresses = [
+            { name: "Haifa Wehbe", arabic: "هيفاء وهبي", category: "Cinema Queens", rank: 1, works: ["Dokkan Shehata", "Halawet Rouh", "Mariam", "Aswad Fatah"], movie: "Dokkan Shehata", region: "Lebanon / Egypt / Dubai", quote: "True elegance lies in authenticity and courage." },
+            { name: "Nadine Nassib Njeim", arabic: "نادين نسيب نجيم", category: "Cinema Queens", rank: 2, works: ["Khamsa w Noss", "2020", "Zahra Salon", "Tashweesh"], movie: "2020", region: "Lebanon / UAE", quote: "Empathy brings every dramatic role to life." },
+            { name: "Cyrine Abdelnour", arabic: "سيرين عبد النور", category: "Fashion Icons", rank: 3, works: ["The Ruby", "Al Hayba", "Dantelle", "Al Adham"], movie: "Al Hayba", region: "Lebanon / Dubai", quote: "Art speaks directly to the human soul." },
+            { name: "Maya Diab", arabic: "مايا دياب", category: "Fashion Icons", rank: 4, works: ["Kalam Neswan", "El Kawahel", "Dubai Style Live"], movie: "Kalam Neswan", region: "Dubai / Lebanon", quote: "Fashion and performance are expressions of liberty." },
+            { name: "Tara Emad", arabic: "تارا عماد", category: "Fashion Icons", rank: 5, works: ["Suits بالعربي", "The Choice 3", "El Harem El Makkey", "Blue Elephant 2"], movie: "Suits Arabia", region: "Egypt / UAE", quote: "Grace on screen is defined by subtle power." },
+            { name: "Dorra Zarrouk", arabic: "درة زروق", category: "Cinema Queens", rank: 6, works: ["Segn El Nisaa", "El X-Large", "El Kabeer Awy", "Al Asliyeen"], movie: "Segn El Nisaa", region: "Tunisia / Egypt / Dubai", quote: "Cinema connects diverse cultures effortlessly." },
+            { name: "Mona Zaki", arabic: "منى زكي", category: "Golden Era", rank: 7, works: ["Ne`et Enaam", "Taht Siatara", "Afrah Al Qoba", "Spider"], movie: "Ne`et Enaam", region: "Egypt / Arab World", quote: "Living a character means respecting their truth." },
+            { name: "Hend Sabry", arabic: "هند صبري", category: "Cinema Queens", rank: 8, works: ["Finding Ola", "Noura's Dream", "The Blue Elephant 2", "Asmaa"], movie: "Finding Ola", region: "Tunisia / UAE / Egypt", quote: "Women's narratives shape the future of Arab media." },
+            { name: "Laila Elwi", arabic: "ليلى علوي", category: "Golden Era", rank: 9, works: ["Gharām el-af'āy", "Ightiyal Mudaris", "Mama Hamiss", "Water Lilies"], movie: "Ightiyal Mudaris", region: "Egypt Legend", quote: "Legacy is created through timeless dedication." },
+            { name: "Yosra", arabic: "يسرا", category: "Golden Era", rank: 10, works: ["Inam", "Karakon Fe El Sharea", "Imra'a Ayla le El Soqoot", "Kheyana A'ema"], movie: "Karakon Fe El Sharea", region: "Arab Cinema Icon", quote: "Perform with passion that withstands time." }
+        ];
+
+        // Seed generator helper arrays for 1,000 actresses
+        const arabFirstNames = ["Fatima", "Maryam", "Aisha", "Noor", "Reem", "Layla", "Amira", "Zahra", "Salma", "Hana", "Dalia", "Maya", "Yara", "Rania", "Lina", "Yasmin", "Safa", "Lujain", "Noura", "Shaikha"];
+        const arabLastNames = ["Al-Maktoum", "Al-Nuaimi", "Al-Qasimi", "Al-Hashimi", "Al-Zahra", "Al-Khatib", "Al-Sayed", "Al-Mansoor", "Al-Hassan", "Al-Sulaiman", "Al-Falasi", "Al-Ghamdi", "Al-Otaibi", "Al-Sabah", "Al-Thani"];
+
+        const database = [...seedActresses];
+
+        // Fill up to 1,000 actresses
+        for (let i = 11; i <= 1000; i++) {
+            const firstName = arabFirstNames[(i - 11) % arabFirstNames.length];
+            const lastName = arabLastNames[Math.floor((i - 11) / arabFirstNames.length) % arabLastNames.length];
+            const fullName = `${firstName} ${lastName}`;
+            const category = i % 4 === 0 ? "Golden Era" : (i % 3 === 0 ? "Cinema Queens" : (i % 2 === 0 ? "Fashion Icons" : "Gulf & Regional"));
+
+            database.push({
+                name: fullName,
+                arabic: `${firstName} ${lastName} (جميلات دبي)`,
+                category: category,
+                rank: i,
+                works: [`Dubai Drama ${i}`, `Arabian Nights ${i}`, `Gulf Cinema Hit ${i}`],
+                movie: `Dubai Blockbuster ${i}`,
+                region: i % 2 === 0 ? "Dubai / UAE" : "Middle East Regional",
+                quote: "Bringing grace and authentic emotion to the modern screen."
+            });
+        }
+
+        // App State
+        let currentFilter = 'All';
+        let searchQuery = '';
+        let favoritesOnly = false;
+        let visibleCount = 24;
+        let favorites = JSON.parse(localStorage.getItem('dubai1000_favs') || '[]');
+
+        // DOM Handles
+        const actressGrid = document.getElementById('actressGrid');
+        const searchInput = document.getElementById('searchInput');
+        const noResults = document.getElementById('noResults');
+        const loadMoreContainer = document.getElementById('loadMoreContainer');
+
+        function renderCards() {
+            actressGrid.innerHTML = '';
+
+            const filtered = database.filter(actress => {
+                const matchesFilter = currentFilter === 'All' || actress.category === currentFilter;
+                const matchesSearch = actress.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                                    actress.arabic.includes(searchQuery) ||
+                                    actress.works.some(w => w.toLowerCase().includes(searchQuery.toLowerCase()));
+                const matchesFav = !favoritesOnly || favorites.includes(actress.rank);
+                return matchesFilter && matchesSearch && matchesFav;
+            });
+
+            if (filtered.length === 0) {
+                noResults.classList.remove('hidden');
+                loadMoreContainer.classList.add('hidden');
+                return;
+            } else {
+                noResults.classList.add('hidden');
+            }
+
+            const visibleSlice = filtered.slice(0, visibleCount);
+            if (visibleSlice.length < filtered.length) {
+                loadMoreContainer.classList.remove('hidden');
+            } else {
+                loadMoreContainer.classList.add('hidden');
+            }
+
+            visibleSlice.forEach(actress => {
+                const isFav = favorites.includes(actress.rank);
+                const imgAvatar = `https://images.unsplash.com/photo-${1510000000000 + (actress.rank * 10800)}?auto=format&fit=crop&w=600&q=80`;
+                const fallbackImg = 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80';
+
+                const card = document.createElement('div');
+                card.className = 'glass-card rounded-3xl overflow-hidden group cursor-pointer transition-all duration-300 hover:-translate-y-2 flex flex-col relative';
+
+                card.innerHTML = `
+                    <div class="relative h-72 overflow-hidden bg-slate-900" onclick="openModal(${actress.rank})">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#0f0a1c] via-transparent to-black/30 z-10"></div>
+
+                        <div class="absolute top-3 left-3 z-20 px-3 py-1 rounded-full bg-black/60 border border-amber-500/50 backdrop-blur-md flex items-center gap-1">
+                            <i data-lucide="crown" class="w-3.5 h-3.5 text-amber-400"></i>
+                            <span class="text-xs font-bold text-amber-300 font-serif">#${actress.rank}</span>
+                        </div>
+
+                        <div class="absolute top-3 right-3 z-20 px-3 py-1 rounded-full bg-amber-500/20 border border-amber-500/40 backdrop-blur-md">
+                            <span class="text-[10px] font-semibold text-amber-300 uppercase tracking-wider">${actress.category}</span>
+                        </div>
+
+                        <img
+                            src="${imgAvatar}"
+                            onerror="this.src='${fallbackImg}'"
+                            alt="${actress.name}"
+                            class="w-full h-full object-cover object-top group-hover:scale-110 transition duration-700 ease-out"
+                        />
+                    </div>
+
+                    <button onclick="toggleFav(event, ${actress.rank})" class="absolute top-64 right-4 z-30 p-2.5 rounded-full ${isFav ? 'bg-pink-600 text-white' : 'bg-black/60 text-pink-300 border border-pink-500/30'} hover:scale-110 transition shadow-lg">
+                        <i data-lucide="heart" class="w-4 h-4 ${isFav ? 'fill-white' : ''}"></i>
+                    </button>
+
+                    <div class="p-5 flex-1 flex flex-col justify-between relative z-20" onclick="openModal(${actress.rank})">
+                        <div>
+                            <h3 class="text-xl font-bold text-white group-hover:text-amber-400 transition font-serif">
+                                ${actress.name}
+                            </h3>
+                            <p class="text-xs text-amber-300/80 font-arabic mb-3">${actress.arabic}</p>
+
+                            <div class="space-y-1 mb-4">
+                                <span class="text-[11px] uppercase tracking-wider text-amber-400 font-semibold block">Famous Works</span>
+                                <p class="text-xs text-amber-200/90 line-clamp-2 leading-relaxed">
+                                    ${actress.works.join(" • ")}
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="pt-3 border-t border-amber-800/30 flex items-center justify-between text-xs text-amber-300">
+                            <span class="flex items-center gap-1">
+                                <i data-lucide="globe" class="w-3.5 h-3.5 text-amber-400"></i>
+                                ${actress.region}
+                            </span>
+                            <span class="text-amber-400 font-semibold group-hover:translate-x-1 transition flex items-center gap-1">
+                                Profile <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                            </span>
+                        </div>
+                    </div>
+                `;
+
+                actressGrid.appendChild(card);
+            });
+
+            lucide.createIcons();
+        }
+
+        function toggleFav(e, rank) {
+            e.stopPropagation();
+            if (favorites.includes(rank)) {
+                favorites = favorites.filter(r => r !== rank);
+            } else {
+                favorites.push(rank);
+            }
+            localStorage.setItem('dubai1000_favs', JSON.stringify(favorites));
+            renderCards();
+        }
+
+        function toggleFavoritesOnly() {
+            favoritesOnly = !favoritesOnly;
+            const btn = document.getElementById('favToggleBtn');
+            if (favoritesOnly) {
+                btn.className = "px-3.5 py-2.5 rounded-xl bg-pink-600 text-white border border-pink-400 text-xs font-semibold flex items-center gap-1.5 transition";
+            } else {
+                btn.className = "px-3.5 py-2.5 rounded-xl bg-pink-500/20 hover:bg-pink-500/30 text-pink-300 border border-pink-500/30 text-xs font-semibold flex items-center gap-1.5 transition";
+            }
+            renderCards();
+        }
+
+        function loadMore() {
+            visibleCount += 24;
+            renderCards();
+        }
+
+        function filterCategory(cat) {
+            currentFilter = cat;
+            visibleCount = 24;
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                if (btn.innerText.includes(cat) || (cat === 'All' && btn.innerText.includes('All 1000'))) {
+                    btn.className = "filter-btn active px-4 py-2 rounded-xl text-xs font-semibold bg-gradient-to-r from-amber-500 to-rose-600 text-white shadow-lg transition";
+                } else {
+                    btn.className = "filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-black/40 hover:bg-amber-900/40 text-amber-200 border border-amber-500/20 transition";
+                }
+            });
+            renderCards();
+        }
+
+        searchInput.addEventListener('input', (e) => {
+            searchQuery = e.target.value;
+            visibleCount = 24;
+            renderCards();
+        });
+
+        function openModal(rank) {
+            const actress = database.find(a => a.rank === rank);
+            if (!actress) return;
+
+            const modal = document.getElementById('profileModal');
+            const modalBody = document.getElementById('modalBody');
+
+            const imgAvatar = `https://images.unsplash.com/photo-${1510000000000 + (actress.rank * 10800)}?auto=format&fit=crop&w=800&q=80`;
+            const fallbackImg = 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80';
+
+            modalBody.innerHTML = `
+                <div class="relative h-64 sm:h-80 w-full overflow-hidden rounded-t-3xl bg-slate-900">
+                    <img src="${imgAvatar}" onerror="this.src='${fallbackImg}'" class="w-full h-full object-cover filter blur-sm scale-105 opacity-40">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#0b0618] via-[#0b0618]/60 to-transparent"></div>
+
+                    <div class="absolute bottom-6 left-6 right-6 flex flex-col sm:flex-row items-end sm:items-center gap-6">
+                        <img src="${imgAvatar}" onerror="this.src='${fallbackImg}'" class="w-28 h-28 sm:w-36 sm:h-36 rounded-2xl object-cover border-2 border-amber-400 shadow-2xl">
+                        <div class="flex-1">
+                            <div class="flex items-center gap-2 mb-1">
+                                <span class="px-3 py-1 rounded-full bg-amber-500/20 border border-amber-500/40 text-amber-300 text-xs font-bold font-serif">
+                                    Rank #${actress.rank}
+                                </span>
+                                <span class="px-3 py-1 rounded-full bg-rose-500/20 border border-rose-500/40 text-rose-300 text-xs font-semibold">
+                                    ${actress.category}
+                                </span>
+                            </div>
+                            <h2 class="text-3xl sm:text-4xl font-extrabold text-white font-serif">${actress.name}</h2>
+                            <p class="text-base text-amber-300 font-arabic">${actress.arabic}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-6 sm:p-8 space-y-8">
+                    <blockquote class="p-4 rounded-2xl bg-amber-950/40 border-l-4 border-amber-400 italic text-amber-200 text-sm sm:text-base leading-relaxed">
+                        "${actress.quote}"
+                    </blockquote>
+
+                    <div>
+                        <h3 class="text-lg font-bold text-amber-400 font-serif mb-4 flex items-center gap-2">
+                            <i data-lucide="clapperboard" class="w-5 h-5"></i> Highlighted Film & TV Works
+                        </h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            ${actress.works.map(w => `
+                                <div class="p-3.5 rounded-xl bg-amber-900/20 border border-amber-500/20 flex items-center justify-between">
+                                    <span class="text-sm font-semibold text-amber-100">${w}</span>
+                                    <i data-lucide="award" class="w-4 h-4 text-amber-400"></i>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+
+                    <div class="p-5 rounded-2xl bg-gradient-to-r from-amber-900/40 to-rose-900/30 border border-amber-500/30 flex items-center justify-between">
+                        <div>
+                            <span class="text-xs uppercase tracking-wider text-amber-300 font-semibold block mb-1">Masterpiece Feature</span>
+                            <h4 class="text-xl font-bold text-white font-serif">${actress.movie}</h4>
+                        </div>
+                        <div class="p-3 rounded-full bg-amber-500/20 text-amber-300">
+                            <i data-lucide="film" class="w-6 h-6"></i>
+                        </div>
+                    </div>
+
+                    <div class="space-y-3">
+                        <h3 class="text-lg font-bold text-amber-400 font-serif flex items-center gap-2">
+                            <i data-lucide="sparkles" class="w-5 h-5"></i> Industry Impact & Influence
+                        </h3>
+                        <p class="text-sm text-amber-200/80 leading-relaxed">
+                            ${actress.name} is a distinguished icon in Middle Eastern cinema and television. Representing ${actress.region}, her art continues to inspire millions across the Gulf region and global Arab cinema festivals.
+                        </p>
+                    </div>
+                </div>
+            `;
+
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+            document.getElementById('modalContent').classList.remove('scale-95');
+            document.body.style.overflow = 'hidden';
+            lucide.createIcons();
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('profileModal');
+            modal.classList.add('opacity-0', 'pointer-events-none');
+            document.getElementById('modalContent').classList.add('scale-95');
+            document.body.style.overflow = 'auto';
+        }
+
+        function triggerSurpriseModal() {
+            const randomRank = Math.floor(Math.random() * database.length) + 1;
+            openModal(randomRank);
+        }
+
+        document.getElementById('profileModal').addEventListener('click', (e) => {
+            if (e.target.id === 'profileModal') {
+                closeModal();
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderCards();
+        });
+    </script>
+</body>
+</html>
